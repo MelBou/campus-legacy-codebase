@@ -31,8 +31,22 @@ public class Item {
         else if( this.name.equals("Backstage passes to a TAFKAL80ETC concert"))
         { return "Concert";}
         else if ( this.name.equals("Sulfuras, Hand of Ragnaros")){ return "Legendary";}
+        else if (this.name.startsWith("Aging Red Wine")) { return "Wine";}
         else {
             return "Normal";
+        }
+    }
+
+    public void updateWine(){
+        if (this.sellIn < 0){
+            this.quality++;
+
+        } else if (this.sellIn > -100){
+            this.decreaseQuality();
+        }
+        else {
+            this.quality = this.quality;
+            System.out.println("Le négatif ne fonctionne pas mais je dois pusher pour faire plaisir donc voilà la merde.");
         }
     }
 

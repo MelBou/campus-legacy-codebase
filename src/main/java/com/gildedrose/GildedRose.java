@@ -27,6 +27,7 @@ public class GildedRose {
             case "Cheese": item.updateCheese(); break;
             case "Concert": item.updateConcert(); break;
             case "Legendary": item.updateLegendary(); break;
+            case "Wine": item.updateWine(); break;
             default: item.updateNormal(); break;
         }
     }

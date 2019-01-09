@@ -16,11 +16,13 @@ public class TexttestFixture {
                 // this conjured item does not work properly yet
                 new Item("Conjured Mana Cake", 3, 6),
                 new Item("Conjured Coca Cola", 5, 15),
-                new Item("Conjured Cheesburger", 8, 3) };
-
+                new Item("Conjured Cheesburger", 8, 3),
+                new Item ("Aging Red Wine", (-150), 3),
+                new Item ("Aging Red Wine 2", 50, 5)
+};
         GildedRose app = new GildedRose(items);
 
-        int days = 35;
+        int days = 5;
         if (args.length > 0) {
             days = Integer.parseInt(args[0]) + 1;
         }
