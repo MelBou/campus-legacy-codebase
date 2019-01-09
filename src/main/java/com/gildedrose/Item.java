@@ -38,15 +38,13 @@ public class Item {
     }
 
     public void updateWine(){
-        if (this.sellIn < 0){
+        if (this.sellIn < 0 && this.sellIn >= -100){
             this.quality++;
 
-        } else if (this.sellIn > -100){
+        } else if (this.sellIn < -100){
             this.decreaseQuality();
-        }
-        else {
+        } else {
             this.quality = this.quality;
-            System.out.println("Le négatif ne fonctionne pas mais je dois pusher pour faire plaisir donc voilà la merde.");
         }
     }
 
